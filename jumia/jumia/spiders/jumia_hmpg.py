@@ -1,6 +1,5 @@
 import scrapy
 
-
 class JumiaHmpgSpider(scrapy.Spider):
     name = 'jumia_hmpg'
     allowed_domains = ['jumia.co.ke']
@@ -14,7 +13,7 @@ class JumiaHmpgSpider(scrapy.Spider):
                 'item_name': item.css('div.name::text').get(),
                 'item_price': item.css('div.prc::text').get(),
                 'item_discount': item.css('div.bdg._dsct::text').get(),
-                'item_category': item.css('a.core::attr(data-category)').get(),
+                'item_categ': item.css('a.core::attr(data-category)').get(),
                 'item_img_url': item.css('img.img::attr(data-src)').get()
             }
             
