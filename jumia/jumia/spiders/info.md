@@ -13,6 +13,7 @@ item_img_url => response.css('img.img::attr(data-src)').get()
 
 ## Cooking oil filter
 
+Next Page => response.css('a.pg::attr(href)').get()
 Item list => response.css('article.prd._fb.col.c-prd')
 
 'item_link': response.css('a.core::attr(href)').get(),
@@ -22,3 +23,5 @@ Item list => response.css('article.prd._fb.col.c-prd')
 'item_discount': response.css('div.bdg._dsct::text').get(),
 'item_categ': response.css('a.core::attr(data-category)').get(),
 'item_img_url': response.css('img.img::attr(data-src)').get()
+
+
