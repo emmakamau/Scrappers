@@ -4,7 +4,7 @@ import scrapy
 class JumiaCookingOilSpider(scrapy.Spider):
     name = 'jumia_cooking_oil'
     allowed_domains = ['www.jumia.co.ke']
-    start_urls = ['https://www.jumia.co.ke/catalog/?q=Cooking+oil']
+    start_urls = ['https://www.jumia.co.ke/catalog/?q=cooking+oil']
 
     def parse(self, response):
         for item in response.css('article.prd._fb.col.c-prd'):
